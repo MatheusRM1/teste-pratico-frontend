@@ -1,3 +1,4 @@
+import { formatPhoneNumber } from "../../hooks/types";
 import { useEmployees } from "../../hooks/useEmployess";
 import "./index.css";
 
@@ -10,11 +11,12 @@ export default function Table() {
     <div className="table-container">
       <table>
         <thead className="header">
-          <tr style={{ color: "black", backgroundColor: "#0500FF" }}>
-            <th>Foto</th>
-            <th>Nome</th>
-            <th>Cargo</th>
-            <th>Data de Admissão</th>
+          <tr className="headerTr" style={{color: "black"}}>
+            <th className="textHeader">Foto</th>
+            <th className="textHeader">Nome</th>
+            <th className="textHeader">Cargo</th>
+            <th className="textHeader">Data de Admissão</th>
+            <th className="textHeader">Telefone</th>
           </tr>
         </thead>
         <tbody>
@@ -23,11 +25,12 @@ export default function Table() {
               <td>
                 <img src={employee.image} style={{width: 30}}/>
               </td>
-              <td>{employee.name}</td>
-              <td>{employee.job}</td>
-              <td>
+              <td className="textBody">{employee.name}</td>
+              <td className="textBody">{employee.job}</td>
+              <td className="textBody">
                 {new Date(employee.admission_date).toLocaleDateString("pt-BR")}
               </td>
+              <td className="textBody">{formatPhoneNumber(employee.phone)}</td>
             </tr>
           ))}
         </tbody>
