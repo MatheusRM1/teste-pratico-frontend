@@ -9,21 +9,21 @@ export default function Table() {
 
   return (
     <div className="table-container">
-      <table>
+      <table className="table">
         <thead className="header">
           <tr className="headerTr" style={{color: "black"}}>
-            <th className="textHeader">Foto</th>
-            <th className="textHeader">Nome</th>
-            <th className="textHeader">Cargo</th>
-            <th className="textHeader">Data de Admissão</th>
-            <th className="textHeader">Telefone</th>
+            <th className="textHeaderL">FOTO</th>
+            <th className="textHeader">NOME</th>
+            <th className="textHeader">CARGO</th>
+            <th className="textHeader">DATA DE ADMISSÃO</th>
+            <th className="textHeaderR">TELEFONE</th>
           </tr>
         </thead>
         <tbody>
           {employees.map((employee) => (
-            <tr key={employee.id} style={{color: "black"}}>
-              <td>
-                <img src={employee.image} style={{width: 30}}/>
+            <tr key={employee.id} className="bodyTr">
+              <td className="textBody">
+                <img src={employee.image} className="image"/>
               </td>
               <td className="textBody">{employee.name}</td>
               <td className="textBody">{employee.job}</td>

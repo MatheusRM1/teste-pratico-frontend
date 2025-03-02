@@ -5,7 +5,7 @@ export default function SearchBar() {
   return (
     <div className="search">
       <form action="post">
-        <div>
+        <div className="input-container">
           <input type="text" placeholder="Pesquisar" className="barra" />
           <div>
             <Search size={20} className="icone" />
