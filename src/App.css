@@ -5,7 +5,14 @@
 .containerFunc{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 100px;
+  justify-content: space-between;  
+  align-items: center;
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+  width: 97%;
+}
+
+.funcionario{
+  font-size: 24px;
+  padding-left: 1.5%;
 }

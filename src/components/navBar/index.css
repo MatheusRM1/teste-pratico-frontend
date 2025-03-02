@@ -4,13 +4,8 @@
     display: flex;
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     background-color: white;
-    justify-content: start;
     align-items: center;
-    -webkit-box-shadow: -4px 4px 11px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -4px 4px 11px -4px rgba(0, 0, 0, 0.75);
     box-shadow: -4px 4px 11px -4px rgba(0, 0, 0, 0.75);
     z-index: 100;
   }
