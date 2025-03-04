@@ -1,54 +1,22 @@
-import { useEffect, useState } from "react";
-import { formatPhoneNumber } from "../../hooks/types";
-import { useEmployees } from "../../hooks/useEmployess";
+import { Employee, formatPhoneNumber } from "../../hooks/types";
 import "./index.css";
+import { useEmployeeSearch } from "../../hooks/useEmployeeSearch";
 
 interface TableProps {
+  employees: Employee[];
   searchTerm: string;
+  loading: boolean;
+  error: string | null;
 }
 
-interface Employee {
-  id: number;
-  name: string;
-  job: string;
-  admission_date: string;
-  phone: string;
-  image: string;
-}
-
-const normalizeText = (text: string) => {
-  return text
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-};
-
-export default function Table({ searchTerm }: TableProps) {
-  const { employees, loading, error } = useEmployees();
-
-  const [filteredEmployees, setFilteredEmployees] = useState<Employee[]>([]);
-
-  useEffect(() => {
-    if (!loading && !error) {
-      const searchQuery = normalizeText(searchTerm);
-
-      const filtered = employees.filter((employee) => {
-        const normalizedName = normalizeText(employee.name);
-        const normalizedJob = normalizeText(employee.job);
-        const normalizePhone = normalizeText(employee.phone);
-      
-        return (
-          normalizedName.includes(searchQuery) ||
-          normalizedJob.includes(searchQuery) ||
-          normalizePhone.includes(searchQuery)
-        );
-      });
-
-      setFilteredEmployees(filtered);
-    }
-  }, [searchTerm, employees, loading, error]);
-
-  console.log("Termo:", searchTerm);
+export default function Table({
+  employees,
+  searchTerm,
+  loading,
+  error,
+}: TableProps) {
+  
+  const filteredEmployees = useEmployeeSearch(employees, searchTerm);
 
   if (loading) return <div className="loading">Carregando...Dados</div>;
   if (error) return <div className="error">Erro: {error}</div>;
