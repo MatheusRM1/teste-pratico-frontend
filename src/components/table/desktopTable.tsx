@@ -48,11 +48,6 @@ export default function DesktopTable({
           ))}
         </tbody>
       </table>
-      {filteredEmployees.length === 0 && (
-        <div className="no-results">
-          Nenhum resultado encontrado para "{searchTerm}"
-        </div>
-      )}
     </div>
   );
 }

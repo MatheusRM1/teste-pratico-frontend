@@ -1,0 +1,28 @@
+.nav {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  align-items: center;
+  box-shadow: -4px 4px 11px -4px rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+
+.bold-text {
+  font-weight: 700; 
+  margin-left: 40px;
+  font-size: 28px;
+}
+
+.normal-text {
+  font-weight: 400; 
+  font-size: 28px;
+}
+
+@media screen and (max-width: 768px) {
+  .normal-text   .bold-text{
+    font-size: 10px;
+  }
+}

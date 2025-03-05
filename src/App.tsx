@@ -9,12 +9,14 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="containerFunc">
-        <h1 className="funcionario">Funcionários</h1>
-        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      </div>
-      <div>
-        <Table searchTerm={searchTerm}/>
+      <div className="container">
+        <div className="containerFunc">
+          <h1 className="funcionario">Funcionários</h1>
+          <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        </div>
+        <div>
+          <Table searchTerm={searchTerm} />
+        </div>
       </div>
     </>
   );

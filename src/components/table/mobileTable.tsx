@@ -42,14 +42,14 @@ export default function MobileTable({
             {openIds.includes(employee.id) ? (
               <ChevronUp
                 color="#0500FF"
-                size={20}
+                size={30}
                 onClick={() => toggleCard(employee.id)}
                 className="chevron"
               />
             ) : (
               <ChevronDown
                 color="#0500FF"
-                size={20}
+                size={30}
                 onClick={() => toggleCard(employee.id)}
                 className="chevron"
               />
