@@ -3,12 +3,9 @@ import "./App.css";
 import NavBar from "./components/navBar";
 import SearchBar from "./components/searchBar";
 import Table from "./components/table";
-import { useEmployees } from "./hooks/useEmployess";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
-  const { employees, loading, error } = useEmployees();
-
   return (
     <>
       <NavBar />
@@ -17,12 +14,7 @@ function App() {
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
       <div>
-        <Table
-          employees={employees}
-          searchTerm={searchTerm}
-          loading={loading}
-          error={error}
-        />
+        <Table searchTerm={searchTerm}/>
       </div>
     </>
   );

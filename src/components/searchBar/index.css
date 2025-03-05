@@ -1,6 +1,7 @@
 .search {
     position: relative;
     width: 290px;
+    margin-right: 20px;
 }
 
 .barra {
@@ -23,4 +24,11 @@
     transform: translateY(-50%);
     color: #9E9E9E;
     pointer-events: none; 
+}
+
+@media screen and (max-width: 768px) {
+    .search{
+        width: 95%;
+        margin-left: 10px;
+    }
 }

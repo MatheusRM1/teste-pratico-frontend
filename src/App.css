@@ -9,10 +9,22 @@
   align-items: center;
   padding-top: 20vh;
   padding-bottom: 10vh;
-  width: 97%;
+  width: 100%;
 }
 
 .funcionario{
   font-size: 24px;
   padding-left: 1.5%;
+}
+
+@media screen and (max-width: 768px) {
+  .containerFunc{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .funcionario{
+    padding-left: 0;
+  }
 }
