@@ -1,66 +1,70 @@
-# Teste Técnico Front-end BeTalent
+# 📌 Teste Prático - BeTalent
 
-Este é um repositório para Testes Técnicos em Front-end da Be. Ele é destinado a pessoas que participam de nossos processos seletivos. 
+## 📋 Sobre o Projeto
+Este projeto foi desenvolvido como parte de um teste prático para a BeTalent. O objetivo era criar uma tabela interativa que exibisse informações sobre funcionários, seguindo um protótipo fornecido pela empresa.
 
-Se você chegou até aqui por meio de um formulário de Teste Técnico, siga em frente. Caso contrário, acompanhe a BeTalent no [Linkedin](https://www.linkedin.com/company/betalenttech), [Instagram](https://www.instagram.com/betalent.tech/), [Facebook](https://web.facebook.com/bemobile.tech) ou na nossa newsletter [BeTalent Academy]([https://t.me/be_tech_community](https://beacademy.substack.com/)). Divulgamos novos processos seletivos por lá.
+## ✨ Funcionalidades
 
-## Desafio
+- **Busca Inteligente**  
+  Filtra dados em tempo real por nome, telefone ou cargo (case-insensitive e sem acentos)
 
-O Teste Técnico para Front-End da BeTalent consiste em construir a visualização de uma tabela com dados que virão de uma API simulada, em json-server.
+- **Formatação Automática**  
+  - Telefones: `(XX) XXXX-XXXX`  
+  - Datas: `DD/MM/AAAA`  
+  - Fotos: Layout responsivo com fallback para imagens quebradas
 
-### Mockup
+- **Experiência do Usuário**  
+  - Loading durante carregamento inicial  
+  - Tratamento de erros de API  
+  - Design fiel ao protótipo fornecido
 
-Este é o [projeto em Figma](https://www.figma.com/file/yw6th52zE9bubewc6ayTg5/Teste-T%C3%A9cnico-Front-End-Be.?type=design&node-id=1%3A4&mode=dev&t=vVxs9eyKybrYmq4Z-1) para você se orientar. Nele, você encontrará estilos, visualização desktop e mobile e outros padrões que deverá seguir.
+---
 
-### Requisitos Gerais
+## 🚀 Tecnologias Utilizadas
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
+- **Frontend**: React + TypeScript + Vite  
+- **Estilização**: CSS Modules  
+- **Mock API**: JSON Server  
+- **Utilitários**: date-fns (formatação de datas)  
 
-Deve-se utilizar React.js ou Vanilla JS (JavaScript puro) para construir o projeto.
+---
 
-É permitido utilizar libs externas, mas recomenda-se que seja o mínimo possível.
+## 🛠️ Como Rodar o Projeto
+Para executar o projeto localmente, siga os passos abaixo:
 
-A visualização deve ser responsiva.
+### 1️⃣ Clone o Repositório
+```bash
+git clone https://github.com/MatheusRM1/teste-pratico-frontend.git
+cd teste-pratico-frontend
+npm install
+npm run dev
+```
 
-A tabela deve conter as seguintes colunas:
+---
 
-- imagem (thumb do/a usuário/a);
-- nome;
-- cargo
-- data de admissão;
-- telefone.
+## 👨💻 Sobre o Desenvolvedor
 
-Também deve ser possível realizar pesquisa na tabela por meio de um input. O input de pesquisa deve permitir filtrar dados por cargo, nome e telefone.
+**Desenvolvido por Matheus Menezes**  
+[![Contato](https://img.shields.io/badge/✉️-Contato-EA4335?style=flat)](mailto:matheusmenezzes10@gmail.com) 
+[![LinkedIn](https://img.shields.io/badge/💼-LinkedIn-0077B5?style=flat)](https://www.linkedin.com/in/matheus-menezes-915684213) 
+[![GitHub](https://img.shields.io/badge/🐙-GitHub-181717?style=flat)](https://github.com/MatheusRM1)
 
-Datas e telefones devem ser formatadas no front-end e não na API.
+Estudante de **Sistemas de Informação na UFJF** e Desenvolvedor Front-End, atuando na criação de soluções web com:
 
-Tenha instaladas em sua máquina as ferramentas [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com/) (ou outro gerenciador de pacotes de sua preferência) para poder trabalhar no projeto.
+- **Stack Principal**: React, TypeScript e Next.js
+- **Experiência Profissional**: Desenvolvimento de projetos em empresa júnior com:
+  - HTML/CSS • JavaScript • PHP
+  - React Native
+  - Next.Js
+- **Formação Acadêmica**: Projetos em React, Java e C++
 
-### Acesso aos dados da API simulada
+**Atuação Multidimensional**:  
+Na empresa júnior, além do desenvolvimento técnico, aprimorei:
+- Comunicação direta com clientes
+- Trabalho em equipe ágil
+- Gestão de expectativas e entregas
 
-Para ter acesso aos dados que alimentarão o projeto, faça o seguinte:
+**Objetivo Atual**:  
+Aplicar conhecimentos acadêmicos em cenários reais, combinando:  
+`código limpo` + `experiência do usuário` + `boas práticas`
 
-1. caso você não tenha, instale o pacote [json-server](https://github.com/typicode/json-server);
-2. clone este repositório do GitHub em sua máquina: [https://github.com/BeMobile/desafio-front-end](https://github.com/BeMobile/desafio-front-end);
-3. entre na pasta do projeto, em sua máquina, e, por meio da linha de comando, execute o comando `json-server --watch db.json`, para consumir a API simulada;
-4. inicie a estrutura e o desenvolvimento do projeto.
-
-É necessário deixar o json-server rodando no terminal para que os dados sejam visualizados no projeto.
-
-Caso você tenha problemas com o json-server, tente rodá-lo com `npx json-server db.json` ou 
-com `yarn json-server <path>/db.json`, em que `<path>` é o caminho completo até o diretório em que o arquivo db.json está localizado. Se mesmo assim não funcionar, busque ajuda na web.
-
-### Critérios de Avaliação
-
-Em ordem de relevância, avaliaremos:
-
-1. lógica de programação;
-2. organização (do código e dos arquivos);
-3. CSS do projeto;
-4. README, que deve conter, pelo menos, as seguintes informações: sobre o projeto, pré-requisitos e instruções para rodar a aplicação.
-
-É um diferencial na avaliação o uso de TypeScript.
-
-### Envio da Solução
-
-O projeto deverá ser hospedado em um repositório no seu GitHub. O link do repositório deverá ser fornecido por meio do formulário de Teste Técnico encaminhado ao seu e-mail. Não serão aceitos links de projetos enviados por outros meios.
-
-Demais instruções e regras serão instruídas nos formulários e nas comunicações do processo seletivo do qual você está participando.
