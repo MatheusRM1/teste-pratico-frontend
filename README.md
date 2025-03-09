@@ -37,6 +37,11 @@ Para executar o projeto localmente, siga os passos abaixo:
 git clone https://github.com/MatheusRM1/teste-pratico-frontend.git
 cd teste-pratico-frontend
 npm install
+
+# Terminal 1 (API Mock)
+npx json-server db.json
+
+# Terminal 2 (Frontend)
 npm run dev
 ```
 
