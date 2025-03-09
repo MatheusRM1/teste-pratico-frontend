@@ -1,5 +1,4 @@
-// NavBar.js
-import "./styles.css";
+import "./navBar.css";
 
 export default function NavBar() {
   return (

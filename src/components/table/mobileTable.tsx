@@ -1,22 +1,19 @@
 import { useState } from "react";
 import { Employee, formatPhoneNumber } from "../../hooks/types";
-import { useEmployeeSearch } from "../../hooks/useEmployeeSearch";
 import { ChevronDown, ChevronUp, Circle } from "lucide-react";
 
 interface TableProps {
   employees: Employee[];
-  searchTerm: string;
   loading: boolean;
   error: string | null;
 }
 
 export default function MobileTable({
   employees,
-  searchTerm,
   loading,
   error,
 }: TableProps) {
-  const filteredEmployees = useEmployeeSearch(employees, searchTerm);
+
   const [openIds, setOpenIds] = useState<number[]>([]);
 
   const toggleCard = (id: number) => {
@@ -34,7 +31,7 @@ export default function MobileTable({
         <h1 className="mobile-textHeader">NOME</h1>
         <Circle color="white" size={20} />
       </div>
-      {filteredEmployees.map((employee) => (
+      {employees.map((employee) => (
         <div className="mobile-card" key={employee.id}>
           <div className="info">
             <img src={employee.image} alt={employee.name} className="image" />

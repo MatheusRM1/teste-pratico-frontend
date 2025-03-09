@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-import "./styles.css";
+import "./search.css";
 
 interface SearchBarProps {
   searchTerm: string;
@@ -12,7 +12,7 @@ export default function SearchBar({
 }: SearchBarProps) {
   return (
     <div className="search">
-      <form action="post" onSubmit={(e) => e.preventDefault()}>
+      <div>
         <input
           type="text"
           placeholder="Pesquisar"
@@ -23,7 +23,7 @@ export default function SearchBar({
         <div>
           <Search size={20} className="icone" />
         </div>
-      </form>
+      </div>
     </div>
   );
 }

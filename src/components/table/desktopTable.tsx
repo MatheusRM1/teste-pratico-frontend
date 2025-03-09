@@ -1,21 +1,16 @@
 import { Employee, formatPhoneNumber } from "../../hooks/types";
-import { useEmployeeSearch } from "../../hooks/useEmployeeSearch";
-import "./styles.css";
 
 interface TableProps {
   employees: Employee[];
-  searchTerm: string;
   loading: boolean;
   error: string | null;
 }
 
 export default function DesktopTable({
   employees,
-  searchTerm,
   loading,
   error,
 }: TableProps) {
-  const filteredEmployees = useEmployeeSearch(employees, searchTerm);
 
   if (loading) return <div className="loading">Carregando...Dados</div>;
   if (error) return <div className="error">Erro: {error}</div>;
@@ -33,7 +28,7 @@ export default function DesktopTable({
           </tr>
         </thead>
         <tbody>
-          {filteredEmployees.map((employee) => (
+          {employees.map((employee) => (
             <tr key={employee.id} className="bodyTr">
               <td className="textBody">
                 <img src={employee.image} className="image" />

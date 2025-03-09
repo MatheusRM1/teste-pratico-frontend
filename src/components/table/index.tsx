@@ -1,6 +1,6 @@
-import "./styles.css";
+import "./table.css";
 import DesktopTable from "./desktopTable";
-import { useEmployees } from "../../hooks/useEmployess";
+import { useEmployeeData } from "../../hooks/useEmployeesData";
 import { useMediaQuery } from "react-responsive";
 import MobileTable from "./mobileTable";
 
@@ -9,7 +9,7 @@ interface TableProps {
 }
 
 export default function Table({ searchTerm }: TableProps) {
-  const { employees, loading, error } = useEmployees();
+  const { employees, loading, error } = useEmployeeData(searchTerm);
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
@@ -17,14 +17,14 @@ export default function Table({ searchTerm }: TableProps) {
       {isMobile ? (
         <MobileTable
           employees={employees}
-          searchTerm={searchTerm}
+
           loading={loading}
           error={error}
         />
       ) : (
         <DesktopTable
           employees={employees}
-          searchTerm={searchTerm}
+
           loading={loading}
           error={error}
         />
